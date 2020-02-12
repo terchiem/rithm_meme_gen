@@ -70,8 +70,66 @@ input {
 
 /* ================================= */
 
+#gallery {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .meme {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  border: 1px solid green;
   font-size: 2rem;
 }
 
+.text {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.top {
+  top: 0;
+  border: 1px solid red;
+}
+
+.bottom {
+  bottom: 0;
+  border: 1px solid blue;
+}
+
+img {
+  border: 2px solid yellow;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #88888880;
+  opacity: 0;
+  transition: all 0.1s ease;
+  z-index: 1;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.delete {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.delete:hover {
+  color: #ff5555;
+}
