@@ -7,7 +7,6 @@ const form = {
   image: document.getElementById('image-link')
 }
 
-
 create.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -19,10 +18,9 @@ create.addEventListener('click', (e) => {
 
   const meme = createMeme();
   gallery.appendChild(meme);
-  gallery.scrollTop = gallery.scrollHeight;
+  meme.scrollIntoView();
 
-  //add close button listener
-
+  // reset form
   form.top.value = '';
   form.bottom.value = '';
   form.image.value = '';
@@ -33,12 +31,11 @@ function createMeme() {
   const meme = document.createElement('div');
   meme.classList.add('meme');
   meme.innerHTML = `
-    <div class="overlay">
-      <button class="delete">x</button>
-    </div>
+    <button class="delete" onclick="gallery.removeChild(this.parentNode)">x</button>
     <div class="top text">${form.top.value}</div>
     <div class="bottom text">${form.bottom.value}</div>
-    <img src="${form.image.value}" alt="">`;
+    <img src="${form.image.value}" alt="">
+  `;
 
   return meme;
 }

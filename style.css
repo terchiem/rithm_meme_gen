@@ -95,7 +95,6 @@ input {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   min-width: 400px;
-  border: 3px solid black;
 }
 
 .text {
@@ -127,32 +126,28 @@ input {
 
 .meme img {
   width: 100%;
+  border: 1px solid black;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #88888880;
-  opacity: 0;
-  transition: all 0.1s ease;
-  z-index: 1;
-}
-
-.overlay:hover {
-  opacity: 1;
+.meme:hover > .delete {
+  transform: scaleX(1);
 }
 
 .delete {
-  position: relative;
-  border: none;
-  background-color: transparent;
+  position: absolute;
+  padding: 4px 16px;
+  top: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.1s all ease;
+  background-color: #000;
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.5em;
+  border: none;
+  z-index: 1;
 }
 
 .delete:hover {
-  color: #ff5555;
+  color: #ff3b3b;
 }
