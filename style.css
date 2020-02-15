@@ -44,6 +44,8 @@ body {
 h1 {
   margin: 10px;
   text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 64px;
 }
 
 input {
@@ -71,6 +73,10 @@ input {
 /* ================================= */
 
 #gallery {
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
   height: 100vh;
   overflow-y: scroll;
 }
@@ -81,8 +87,7 @@ input {
   position: relative;
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   text-align: center;
-  border: 1px solid green;
-  font-size: 2rem;
+  min-width: 400px;
 }
 
 .text {
@@ -90,20 +95,30 @@ input {
   position: absolute;
   left: 0;
   right: 0;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    0 3px 0 #000,
+    0 -3px 0 #000,
+    3px 0 0 #000,
+    -3px 0 0 #000
 }
 
 .top {
   top: 0;
-  border: 1px solid red;
 }
 
 .bottom {
   bottom: 0;
-  border: 1px solid blue;
 }
 
-img {
-  border: 2px solid yellow;
+.meme img {
+  width: 100%;
 }
 
 .overlay {
