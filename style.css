@@ -70,6 +70,12 @@ input {
   background-color: #8d83d4;
 }
 
+#error {
+  margin-left: 12px;
+  color: red;
+  font-size: 0.9em;
+}
+
 /* ================================= */
 
 #gallery {
@@ -79,6 +85,7 @@ input {
   flex-wrap: wrap;
   height: 100vh;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .meme {
@@ -88,6 +95,7 @@ input {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   min-width: 400px;
+  border: 3px solid black;
 }
 
 .text {
