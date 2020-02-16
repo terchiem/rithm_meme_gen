@@ -23,14 +23,9 @@ ul, p {
 }
 
 /* ============================== */
-
-body {
-  overflow: hidden;
-}
-
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) 3fr;
+  grid-template-columns: minmax(360px, 1fr) 3fr;
 }
 
 /* ============================== */
@@ -79,18 +74,20 @@ input {
 /* ================================= */
 
 #gallery {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   height: 100vh;
+  background-color: #f4f2ff;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
 .meme {
   display: inline-block;
-  margin: 10px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   position: relative;
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   text-align: center;
@@ -131,6 +128,9 @@ input {
 .meme img {
   width: 100%;
   border: 1px solid black;
+  box-shadow: 
+    1px 1px 6px 3px rgba(0, 0, 0, 0.205),
+    1px 1px 1px 2px rgba(0, 0, 0, 0.295);
 }
 
 .meme:hover > .delete {
@@ -154,4 +154,19 @@ input {
 
 .delete:hover {
   color: #ff3b3b;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  #gallery {
+    overflow-y: inherit;
+    height: auto;
+  }
 }
