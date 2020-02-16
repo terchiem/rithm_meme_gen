@@ -13,18 +13,12 @@
     <div id="form">
       <h1>Meme Generator</h1>
       <form action="">
-        <div class="form-field">
-          <label for="top">Top Text</label>
-          <input id="top-text" type="text" name="top">
-        </div>
-        <div class="form-field">
-          <label for="bottom">Bottom Text</label>
-          <input id="bottom-text" type="text" name="bottom">
-        </div>
-        <div class="form-field">
-          <label for="link">Image Link <span id="error"></span></label>
-          <input id="image-link" type="text" name="link">
-        </div>
+        <label for="top">Top Text</label>
+        <input id="top-text" type="text" name="top">
+        <label for="bottom">Bottom Text</label>
+        <input id="bottom-text" type="text" name="bottom">
+        <label for="link">Image Link <span id="error"></span></label>
+        <input id="image-link" type="text" name="link">
         <input type="submit" value="Create" id="create">
       </form>
     </div>
@@ -33,19 +27,13 @@
         <button class="delete" onclick="gallery.removeChild(this.parentNode)">x</button>
         <div class="top text">I am the top text</div>
         <div class="bottom text">I am the bottom text</div>
-        <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2019/02/dog-451643.jpg?h=bf654dbc&itok=MQGvBmuo" alt="">
+        <img src="https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2019/02/dog-451643.jpg" alt="">
       </div>
       <div class="meme">
         <button class="delete" onclick="gallery.removeChild(this.parentNode)">x</button>
-        <div class="top text">second meme</div>
-        <div class="bottom text">with a longer than usual bottom text to test out the boundaries of this thing</div>
-        <img src="5.JPG" alt="">
-      </div>
-      <div class="meme">
-        <button class="delete" onclick="gallery.removeChild(this.parentNode)">x</button>
-        <div class="top text">with a longer than usual bottom text to test out the boundaries of this thing</div>
-        <div class="bottom text">with a longer than usual bottom text to test out the boundaries of this thing</div>
-        <img src="6.JPG" alt="">
+        <div class="top text">one does not simply</div>
+        <div class="bottom text">generate a meme</div>
+        <img src="https://imgflip.com/s/meme/One-Does-Not-Simply.jpg" alt="">
       </div>
     </div>
   </div>

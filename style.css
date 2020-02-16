@@ -23,6 +23,7 @@ ul, p {
 }
 
 /* ============================== */
+
 .wrapper {
   display: grid;
   grid-template-columns: minmax(360px, 1fr) 3fr;
@@ -155,6 +156,8 @@ input {
 .delete:hover {
   color: #ff3b3b;
 }
+
+/* ================================= */
 
 @media screen and (max-width: 800px) {
   body {
